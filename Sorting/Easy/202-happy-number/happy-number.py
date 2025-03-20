@@ -1,12 +1,10 @@
-def square(num):
-    return sum(n * n for n in num)
-
-def to_digits(n):
-    re: list[int] = []
+def square(n: int) -> int:
+    summ = 0
     while n > 0:
-        re.append(n %10)
-        n = n // 10
-    return re
+        d = n % 10 
+        summ += d ** 2 
+        n = n // 10     
+    return summ
 
 
 class Solution:
@@ -14,7 +12,7 @@ class Solution:
         freq: dict[int, int] = {}
 
         while n != 1:
-            n = square(to_digits(n))
+            n = square(n)
             if n in freq:
                 return False
             freq[n] = 1
