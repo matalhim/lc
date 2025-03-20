@@ -4,7 +4,5 @@ class Solution:
         while num > 0:
             n_list.append(num % 10)
             num = num // 10
-        print(n_list)
-
         return sum(sorted(n_list)[:2]) * 10 + sum(sorted(n_list)[2:])
         
