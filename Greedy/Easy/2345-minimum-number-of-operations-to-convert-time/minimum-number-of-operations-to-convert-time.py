@@ -7,7 +7,7 @@ class Solution:
         correct = correct_h * 60 + correct_m
         
         if correct < current:
-            orrect += 24 * 60
+            correct += 24 * 60
         
         diff: int = correct - current
         res: int = 0
