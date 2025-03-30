@@ -6,9 +6,6 @@ class Solution:
         current = current_h * 60 + current_m
         correct = correct_h * 60 + correct_m
         
-        if correct < current:
-            correct += 24 * 60
-        
         diff: int = correct - current
         res: int = 0
         
