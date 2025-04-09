@@ -1,13 +1,11 @@
 class Solution:
     def maximumElementAfterDecrementingAndRearranging(self, arr: List[int]) -> int:
+        l = 0
         arr.sort()
-        arr[0] = 1
-        for i in range(len(arr) - 1):
-            if arr[i + 1] - arr[i] > 1:
-                arr[i+1] = arr[i] + 1
-        
-        return arr[-1]
-            
+        for r in arr:
+            if r > l:
+                l += 1
+        return l
 
 
 
